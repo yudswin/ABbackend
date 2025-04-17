@@ -1,0 +1,42 @@
+{
+  "name": "abbackend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "migrate:prod:generate": "drizzle-kit generate --config=drizzle-production.config.ts",
+    "migrate:prod:migrate": "drizzle-kit migrate --config=drizzle-production.config.ts",
+    "migrate:prod:pull": "drizzle-kit pull --config=drizzle-production.config.ts",
+    "migrate:prod:push": "drizzle-kit push --config=drizzle-production.config.ts",
+    "migrate:prod:check": "drizzle-kit check --config=drizzle-production.config.ts",
+    "migrate:prod:up": "drizzle-kit up --config=drizzle-production.config.ts",
+    "migrate:dev:generate": "drizzle-kit generate --config=drizzle-dev.config.ts",
+    "migrate:dev:migrate": "drizzle-kit migrate --config=drizzle-dev.config.ts",
+    "migrate:dev:pull": "drizzle-kit pull --config=drizzle-dev.config.ts",
+    "migrate:dev:push": "drizzle-kit push --config=drizzle-dev.config.ts",
+    "migrate:dev:check": "drizzle-kit check --config=drizzle-dev.config.ts",
+    "migrate:dev:up": "drizzle-kit up --config=drizzle-dev.config.ts",
+    "start": "nodemon --exec ts-node -r tsconfig-paths/register src/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
+    "dotenv": "^16.5.0",
+    "drizzle-kit": "^0.30.6",
+    "drizzle-orm": "^0.41.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.0",
+    "pg": "^8.14.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
